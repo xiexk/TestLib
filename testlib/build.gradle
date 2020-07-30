@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -39,7 +39,7 @@ ext {
     GITHUB_REPO_PATH = "E:\\project\\studio\\TestLib"       //这里指定的就是刚刚新建项目后clone下来的在本地的路径
     PUBLISH_GROUP_ID = 'com.kun'
     PUBLISH_ARTIFACT_ID = 'testlib'
-    PUBLISH_VERSION = '1.0.2'
+    PUBLISH_VERSION = '1.0.3'
 }
 uploadArchives {
     repositories.mavenDeployer {
@@ -62,3 +62,16 @@ artifacts {
     archives androidSourcesJar
 }
 
+//上传命令：gradlew clean build bintrayUpload -PbintrayUser=ws1349010832 -PbintrayKey=abed512451725a08d39ecc66d24e2402090508e7 -PdryRun=false
+
+
+publish {
+    //repoName = 'maven'//仓库名
+    userOrg = 'ws1349010832'//用户名
+    groupId = 'com.kun'//生成的gradle依赖前缀。
+    artifactId = 'testlib'//项目名
+    publishVersion = '1.0.6' //版本号
+    desc = '测试依赖公用' //描述
+    website = 'https://github.com/xiexk/TestLib'
+    repository = 'https://github.com/xiexk/TestLib.git'
+}
