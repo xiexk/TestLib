@@ -70,7 +70,7 @@ publish {
     userOrg = 'ws1349010832'//用户名
     groupId = 'com.kun'//生成的gradle依赖前缀。
     artifactId = 'testlib'//项目名
-    publishVersion = '1.0.6' //版本号
+    publishVersion = '1.0.7' //版本号
     desc = '测试依赖公用' //描述
     website = 'https://github.com/xiexk/TestLib'
     repository = 'https://github.com/xiexk/TestLib.git'

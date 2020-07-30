@@ -3,9 +3,27 @@
 buildscript {
     
     repositories {
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/spring" }
+        maven { url "https://maven.aliyun.com/repository/spring-plugin" }
+        maven { url "https://maven.aliyun.com/repository/grails-core" }
+        maven { url "https://maven.aliyun.com/repository/apache-snapshots" }
         google()
-        jcenter()
-        maven { url 'https://github.com/xiexk/TestLib/master' }
+//        jcenter()
+//        maven{url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+//        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://dl.bintray.com/guardian/android" }
+        mavenCentral()
+
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.2'
